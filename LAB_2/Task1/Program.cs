@@ -12,7 +12,7 @@
                 Console.WriteLine($"Для значення a: {a[i]}");
                 for (double x = xStart; x <= xEnd; x += dx)
                 {
-                    y = Math.Pow(a[i] * Math.Pow(x, 2 ), 1.0/3.0 ) + Math.Pow(E, Math.Pow(-x, 2)) / Math.Sqrt(a[i]+1 * x);
+                    y = Math.Pow(a[i] * Math.Pow(x, 2 ), 1.0/3.0 ) + Math.Pow(E, Math.Pow(-x, 2)) / Math.Sqrt((a[i]+1) * x);
                     Console.WriteLine($"x = {x, 2:F2}, y = {y, 2:F5}");
                 }
             }
