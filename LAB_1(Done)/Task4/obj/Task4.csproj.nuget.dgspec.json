@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\LAB_1\\Task4\\Task4.csproj": {}
+    "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\LAB_1(Done)\\Task4\\Task4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\LAB_1\\Task4\\Task4.csproj": {
+    "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\LAB_1(Done)\\Task4\\Task4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\LAB_1\\Task4\\Task4.csproj",
+        "projectUniqueName": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\LAB_1(Done)\\Task4\\Task4.csproj",
         "projectName": "Task4",
-        "projectPath": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\LAB_1\\Task4\\Task4.csproj",
+        "projectPath": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\LAB_1(Done)\\Task4\\Task4.csproj",
         "packagesPath": "C:\\Users\\Dirana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\LAB_1\\Task4\\obj\\",
+        "outputPath": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\LAB_1(Done)\\Task4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
