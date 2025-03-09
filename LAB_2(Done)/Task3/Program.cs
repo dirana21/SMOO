@@ -171,11 +171,11 @@
                                     Console.WriteLine($"You have left {playerLifeForSecondRound} life");
                                     if (inputNumber > firstDifficulty)
                                     {
-                                        Console.WriteLine($"The choosen number of computer is lesser ( < ) than {inputNumber}! So range of number are 1 - {inputNumber - 1} ");
+                                        Console.WriteLine($"The choosen number of computer is lesser ( < ) than {inputNumber}! So range of number are 10 - {inputNumber - 1} ");
                                     }
                                     else
                                     {
-                                        Console.WriteLine($"The choosen number of computer is greater ( > ) than {inputNumber}! So range of number are {inputNumber + 1} - 10");
+                                        Console.WriteLine($"The choosen number of computer is greater ( > ) than {inputNumber}! So range of number are {inputNumber + 1} - 100");
                                     }
                                 }
                             }
