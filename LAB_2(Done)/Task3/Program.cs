@@ -2,194 +2,34 @@
 {
     internal class Program
     {
-        public static int playerLifeForFirstRound = 0;
-        public static int playerLifeForSecondRound = 0;
+        public static int playerLife = 0;
         public static int inputNumber = 0;
         public static int inputNumberForChoose = 0;
-        public static int firstRound = 3;
-        public static int secondRound = 2;
         public static int userScore = 0;
         public static int computerScore = 0;
         public static bool startGame = true;
         public static int winsCount = 0;
-
-        public static void GuesMyNumber()
+        public static bool ifPlayerWantContinue = true;
+        public static int CheckIfInt()
         {
-            Random randomNumber = new Random();
-            int firstDifficulty = 0;
-            int secondDifficulty = 0;
-            Console.WriteLine("\t ====First Round====");
-            for (int i = 0; i < firstRound; i++)
+            int result = 0;
+            while (true)
             {
-                if (userScore > 0)
-                {
-                    Console.WriteLine($"Now u have {userScore} score");
-                }
-
-                firstDifficulty = randomNumber.Next(1, 10);
-                playerLifeForFirstRound += 5;
-                Console.WriteLine($"\t==The {i + 1} battle has begun== \nEnter the number that you think the computer has guessed: ");
-                while (playerLifeForFirstRound > 0)
-                {
-                    if (!startGame) Console.WriteLine($"Write a number again");
-                    startGame = false;
-                    while (true)
-                    {
-                        string userInput = Console.ReadLine();
-                        if (int.TryParse(userInput, out inputNumber)) break;
-                        else Console.WriteLine("Error! Enter an integer!!!");
-                    }
-
-                    if (firstDifficulty == inputNumber)
-                    {
-                        Console.WriteLine("Congratulations! You are a choose right number!!!");
-                        Console.WriteLine("Are you want continue to play again? 1 - Yes, 2 - No");
-                        while (true)
-                        {
-                            string userInput = Console.ReadLine();
-                            if (int.TryParse(userInput, out inputNumberForChoose)) break;
-                            else Console.WriteLine("Error! Enter an integer!!!");
-                        }
-
-                        if (inputNumberForChoose == 2)
-                        {
-                            
-                            userScore += playerLifeForFirstRound * 5;
-                            Console.WriteLine($"Your score is: {userScore}!!");
-                            Console.WriteLine($"Computer score is: {computerScore}!!");
-                            if(computerScore > userScore) Console.WriteLine("Computer Win!!!");
-                            else Console.WriteLine("U Win!!!");
-                            return;
-                        }
-
-                        winsCount += 1;
-                        break;
-                    }
-                    else
-                    {
-                        playerLifeForFirstRound -= 1;
-                        Console.WriteLine($"Ohhh this is not the number that the computers thought, \n - 1 life, \nYou have left {playerLifeForFirstRound} life");
-                        if (playerLifeForFirstRound > 1)
-                        {
-                            Console.WriteLine($"You have clue, if you want to use it: 1 - Yes, 2 - No \nBut if you choose yes, you'll lose 1 life directly");
-                            while (true)
-                            {
-                                string userInput = Console.ReadLine();
-                                if (int.TryParse(userInput, out inputNumberForChoose)) break;
-                                else Console.WriteLine("Error! Enter an integer!!!");
-                            }
-
-                            if (inputNumberForChoose == 1)
-                            {
-                                playerLifeForFirstRound -= 1;
-                                Console.WriteLine($"You have left {playerLifeForFirstRound} life");
-                                if (inputNumber > firstDifficulty)
-                                {
-                                    Console.WriteLine($"The choosen number of computer is lesser ( < ) than {inputNumber}! So range of number are 1 - {inputNumber - 1} ");
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"The choosen number of computer is greater ( > ) than {inputNumber}! So range of number are {inputNumber + 1} - 10");
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (playerLifeForFirstRound == 0)
-                {
-                    Console.WriteLine("Sorry but you are lose this round))");
-                    computerScore += playerLifeForFirstRound * 5;
-                }
+                string userInput = Console.ReadLine();
+                if (int.TryParse(userInput, out result)) break;
+                else Console.WriteLine("Error! Enter an integer!!!");
             }
-
-            if (winsCount == 3)
+            return result;
+        }
+        public static void HowManyScore()
+        {
+            if (userScore > 0)
             {
-                Console.WriteLine("\t ====Second Round====");
-                for (int i = 0; i < secondRound; i++)
-                {
-                    if (userScore > 0)
-                    {
-                        Console.WriteLine($"Now u have {userScore} score");
-                    }
-
-                    secondDifficulty = randomNumber.Next(1, 10);
-                    playerLifeForFirstRound += 23;
-                    Console.WriteLine($"\t==The {i + 1} battle has begun== \nEnter the number that you think the computer has guessed: ");
-                    while (playerLifeForFirstRound > 0)
-                    {
-                        if (!startGame) Console.WriteLine($"Write a number again");
-                        startGame = false;
-                        while (true)
-                        {
-                            string userInput = Console.ReadLine();
-                            if (int.TryParse(userInput, out inputNumber)) break;
-                            else Console.WriteLine("Error! Enter an integer!!!");
-                        }
-
-                        if (secondDifficulty == inputNumber)
-                        {
-                            Console.WriteLine("Congratulations! You are a choose right number!!!");
-                            Console.WriteLine("Are you want continue to play again? 1 - Yes, 2 - No");
-                            while (true)
-                            {
-                                string userInput = Console.ReadLine();
-                                if (int.TryParse(userInput, out inputNumberForChoose)) break;
-                                else Console.WriteLine("Error! Enter an integer!!!");
-                            }
-
-                            if (inputNumberForChoose == 2)
-                            {
-                                
-                                userScore += playerLifeForSecondRound * 10;
-                                Console.WriteLine($"Your score is: {userScore}!!");
-                                Console.WriteLine($"Computer score is: {computerScore}!!");
-                                if(computerScore > userScore) Console.WriteLine("Computer Win!!!");
-                                else Console.WriteLine("U Win!!!");
-                                return;
-                            }
-
-                            break;
-                        }
-                        else
-                        {
-                            playerLifeForSecondRound -= 1;
-                            Console.WriteLine($"Ohhh this is not the number that the computers thought, \n - 1 life, \nYou have left {playerLifeForSecondRound} life");
-                            if (playerLifeForSecondRound > 1)
-                            {
-                                Console.WriteLine($"You have clue, if you want to use it: 1 - Yes, 2 - No \nBut if you choose yes, you'll lose 1 life directly");
-                                while (true)
-                                {
-                                    string userInput = Console.ReadLine();
-                                    if (int.TryParse(userInput, out inputNumberForChoose)) break;
-                                    else Console.WriteLine("Error! Enter an integer!!!");
-                                }
-
-                                if (inputNumberForChoose == 1)
-                                {
-                                    playerLifeForSecondRound -= 1;
-                                    Console.WriteLine($"You have left {playerLifeForSecondRound} life");
-                                    if (inputNumber > firstDifficulty)
-                                    {
-                                        Console.WriteLine($"The choosen number of computer is lesser ( < ) than {inputNumber}! So range of number are 10 - {inputNumber - 1} ");
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine($"The choosen number of computer is greater ( > ) than {inputNumber}! So range of number are {inputNumber + 1} - 100");
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (playerLifeForSecondRound == 0)
-                    {
-                        Console.WriteLine("Sorry but you are lose!!!");
-                        computerScore += playerLifeForSecondRound * 10;
-                    }
-                }
+                Console.WriteLine($"Now u have {userScore} score");
             }
-
+        }
+        public static void WhoWon()
+        {
             Console.WriteLine($"Totaly u reach: {userScore}");
             Console.WriteLine($"Totaly computer reach : {computerScore}");
             if (computerScore > userScore)
@@ -201,7 +41,106 @@
                 Console.WriteLine("U Win!!!");
             }
         }
+        public static void loseRound(int life, int score)
+        {
+            if (life == 0)
+            {
+                Console.WriteLine("Sorry but you are lose this round))");
+                computerScore += score * 5;
+            }
+        }
+        public static void ContinueRoundOrNo(int life)
+        {
+            Console.WriteLine("Are you want continue to play again? 1 - Yes, 2 - No");
+            inputNumberForChoose = CheckIfInt();
+            if (inputNumberForChoose == 2)
+            {
+                userScore += life * 5;
+                Console.WriteLine($"Your score is: {userScore}!!");
+                Console.WriteLine($"Computer score is: {computerScore}!!");
+                if(computerScore > userScore) Console.WriteLine("Computer Win!!!");
+                else Console.WriteLine("U Win!!!");
+                ifPlayerWantContinue = false;
+            }
+        }
+        public static void RightChoice(int life)
+        {
+            Console.WriteLine("Congratulations! You are a choose right number!!!");
+            ContinueRoundOrNo(life);
+            if(!ifPlayerWantContinue) return;
+            winsCount += 1;
+            userScore += life * 5;
+        }
+        public static void Clue(int dif)
+        {
+            if (inputNumberForChoose == 1)
+            {
+                playerLife -= 1;
+                Console.WriteLine($"You have left {playerLife} life");
+                if (inputNumber > dif)
+                {
+                    Console.WriteLine($"The choosen number of computer is lesser ( < ) than {inputNumber}! So range of number are 1 - {inputNumber - 1} ");
+                }
+                else
+                {
+                    Console.WriteLine($"The choosen number of computer is greater ( > ) than {inputNumber}! So range of number are {inputNumber + 1} - 10");
+                }
+            }
+        }
+        public static void WrongChoice(int dif)
+        {
+            playerLife -= 1;
+            Console.WriteLine($"Ohhh this is not the number that the computers thought, \n - 1 life, \nYou have left {playerLife} life");
+            if (playerLife > 1)
+            {
+                Console.WriteLine($"You have clue, if you want to use it: 1 - Yes, 2 - No \nBut if you choose yes, you'll lose 1 life directly");
+                inputNumberForChoose = CheckIfInt();
+                Clue(dif);
 
+            }
+        }
+        public static void Round(int whichRound)
+        {
+            Random randomNumber = new Random();
+            int difficulty = 0;
+            Console.WriteLine($"\t ===={whichRound} Round====");
+            for (int i = 0; i < (whichRound == 1 ? 3 : 2); i++)
+            {
+                HowManyScore();
+                difficulty = whichRound == 1 ? randomNumber.Next(1, 10) : randomNumber.Next(10, 100);
+                playerLife =  whichRound == 1 ? 5 : 23;
+                int score = playerLife;
+                Console.WriteLine($"\t==The {i + 1} battle has begun== \nEnter the number that you think the computer has guessed between 1-10: ");
+                while (playerLife > 0 && ifPlayerWantContinue)
+                {
+                    if (!startGame) Console.WriteLine($"Write a number again");
+                    startGame = false;
+                    inputNumber = CheckIfInt();
+                    if (difficulty == inputNumber)
+                    {
+                        RightChoice(playerLife);
+                        break;
+                    }
+                    else
+                    {
+                        WrongChoice(difficulty);
+                    }
+                    
+                    loseRound(playerLife, score);
+                }
+                
+            }
+        }
+        public static void GuesMyNumber()
+        {
+            int round = 1;
+            Round(1);
+            if (winsCount == 3)
+            {
+                Round(2);
+            }
+            WhoWon();
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("\t     ==GUESS MY NUMBER==");
