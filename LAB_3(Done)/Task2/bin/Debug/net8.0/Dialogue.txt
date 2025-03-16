@@ -1,0 +1,5 @@
+Hi!
+You need to choose how to fill array!
+1 - choose by random number between -100...100
+2 - choose by input.txt
+So choose 1 option, for that option u can write just an integer number!!!!
