@@ -46,12 +46,12 @@
 
         public override string ToString()
         {
-            return $"Ім'я: {firstName}, Прізвище: {lastName}, Дата народження: {dateOfBirth.ToShortDateString()}";
+            return $" Name: {firstName}\n LastName: {lastName}\n DateOfBirth: {dateOfBirth.ToShortDateString()}";
         }
 
         public string ToShortString()
         {
-            return $"Ім'я: {firstName}, Прізвище: {lastName}";
+            return $" Name: {firstName}\n LastName: {lastName}";
         }
     }
 }

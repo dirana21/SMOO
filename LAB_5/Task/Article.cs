@@ -4,7 +4,7 @@
     {
         public Person? author { get; set; }
         public string? title { get; set; }
-        public double? rating { get; set; }
+        public double rating { get; set; }
 
         public Article(Person author, string title, double rating)
         {
@@ -22,7 +22,7 @@
 
         public override string ToString()
         {
-            return $"Title: {this.title}, Author: {this.author}, Rating: {this.rating}";
+            return $" Title: {this.title}\n Author: {this.author}\n Rating: {this.rating}";
         }
     }
 }
