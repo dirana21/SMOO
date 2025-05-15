@@ -2,9 +2,6 @@
 {
     public class ProgrammersDayChecker
     {
-        public static bool IsProgrammersDay(DateTime date)
-        {
-            return date.DayOfYear == 256;
-        }
+        public static Func<DateTime, bool> IsProgrammerDay = date => date.DayOfYear == 256;
     }
 }

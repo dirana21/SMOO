@@ -9,7 +9,7 @@
             Console.WriteLine($"Positive: {PositiveNumbersCounter.Count(numbers)}");
 
             DateTime testDate = new DateTime(2024, 9, 13);
-            Console.WriteLine($"Is this Programmer's Day? {ProgrammersDayChecker.IsProgrammersDay(testDate)}");
+            Console.WriteLine($"Is this Programmer's Day? {ProgrammersDayChecker.IsProgrammerDay(testDate)}");
 
             string text = "Hello! Today is a great day for programming.";
             string[] searchWords1 = { "Day", "Night" };

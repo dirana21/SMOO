@@ -2,15 +2,14 @@
 {
     public class TextContainsWordsChecker
     {   
-        public static bool ContainsAny(string text, string[] words)
+        public static Func<string, string[], bool> ContainsAny = (text, words) =>
         {
-            string loweredText = text.ToLower();
-            foreach (string word in words)
+            foreach (var word in words)
             {
-                string loweredWord = word.ToLower();
-                if (loweredText.Contains(loweredWord)) return true;
+                if (text.ToLower().Contains(word.ToLower()))
+                    return true;
             }
             return false;
-        }
+        };
     }
 }

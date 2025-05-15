@@ -2,9 +2,6 @@
 {
     public class PositiveNumbersCounter
     {
-        public static int Count(int[] numbers)
-        {
-            return numbers.Count(x => x > 0);
-        }
+        public static Func<int[], int> Count = array => array.Count(x => x > 0);
     }
 }
