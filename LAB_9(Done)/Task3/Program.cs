@@ -30,10 +30,9 @@
                 {
                     case "1":
                         var song = CreateSongFromInput();
-                        manager.Add(song);
-                        repository.AddSong(song);
-                        repository.Save(manager.GetAll());
-                        Console.WriteLine("The song has been added.");
+                        manager.Add(song);                              
+                        repository.Save(manager.GetAll());              
+                        Console.WriteLine("Song added.");
                         break;
 
                     case "2":
@@ -71,6 +70,8 @@
                         break;
 
                     case "6":
+                        var allSongs = manager.GetAll();
+                        Console.WriteLine($"Всего песен: {allSongs.Count}");
                         repository.Save(manager.GetAll());
                         Console.WriteLine("Saved.");
                         break;
