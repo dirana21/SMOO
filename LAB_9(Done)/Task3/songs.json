@@ -1,0 +1,26 @@
+[
+  {
+    "NameSong": "Червона рута",
+    "NameAuthor": "Володимир Івасюк",
+    "Composer": "Володимир Івасюк",
+    "Year": 1970,
+    "TextSong": "Не шукай вечорами, ти у мене єдина...",
+    "Performers": [ "Софія Ротару", "Василь Зінкевич" ]
+  },
+  {
+    "NameSong": "Весна",
+    "NameAuthor": "Андрій Хливнюк",
+    "Composer": "Олександр Чемеров",
+    "Year": 2013,
+    "TextSong": "Така весна буває раз на сто років...",
+    "Performers": ["Бумбокс"]
+  },
+  {
+    "NameSong": "Stefania",
+    "NameAuthor": "Олег Псюк",
+    "Composer": "Kalush Orchestra",
+    "Year": 2022,
+    "TextSong": "Стефанія мамо, мамо Стефанія...",
+    "Performers": ["Kalush Orchestra"]
+  }
+]
