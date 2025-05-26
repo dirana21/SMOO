@@ -1,0 +1,15 @@
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\bin\Debug\net8.0\FishModel.exe
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\bin\Debug\net8.0\FishModel.deps.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\bin\Debug\net8.0\FishModel.runtimeconfig.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\bin\Debug\net8.0\FishModel.dll
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\bin\Debug\net8.0\FishModel.pdb
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.AssemblyInfoInputs.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.AssemblyInfo.cs
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.csproj.CoreCompileInputs.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.sourcelink.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.dll
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\refint\FishModel.dll
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.pdb
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\FishModel.genruntimeconfig.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\MODULE3\FishModel\obj\Debug\net8.0\ref\FishModel.dll
