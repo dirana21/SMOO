@@ -1,0 +1,13 @@
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.exe
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.deps.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.runtimeconfig.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.runtimeconfig.dev.json
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.dll
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\bin\Debug\netcoreapp3.1\Task1.pdb
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.csprojAssemblyReference.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.AssemblyInfoInputs.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.AssemblyInfo.cs
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.csproj.CoreCompileInputs.cache
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.dll
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.pdb
+C:\Users\Dirana\Desktop\ViktoriaBelskayaAllLAB_C#\SMOO\2KursC#\LAB_2\LAB_2\Task1\obj\Debug\netcoreapp3.1\Task1.genruntimeconfig.cache
