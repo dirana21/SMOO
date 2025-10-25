@@ -1,0 +1,34 @@
+﻿<Window x:Class="LAB_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:t1="clr-namespace:LAB_3.Views.Task1View"
+        xmlns:t2="clr-namespace:LAB_3.Views.Task2View"
+        xmlns:t3="clr-namespace:LAB_3.Views.Task3View"
+        xmlns:t4="clr-namespace:LAB_3.Views.Task4View"
+        xmlns:t5="clr-namespace:LAB_3.Views.Task5View"
+        xmlns:t6="clr-namespace:LAB_3.Views.Task6View"
+        Title="ЛР3 — Панелі компонування (S12)"
+        Width="1000" Height="650">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Task 1">
+                <t1:Task1View/>
+            </TabItem>
+            <TabItem Header="Task 2">
+                <t2:Task2View/>
+            </TabItem>
+            <TabItem Header="Task 3">
+                <t3:Task3View/>
+            </TabItem>
+            <TabItem Header="Task 4">
+                <t4:Task4View/>
+            </TabItem>
+            <TabItem Header="Task 5">
+                <t5:Task5View/>
+            </TabItem>
+            <TabItem Header="Task 6">
+                <t6:Task6View/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="LAB_3.Views.Task5View.Task5View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,8">
+            <TextBlock Text="pounds:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <TextBox x:Name="TbLb" Width="140"/>
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="→ Convert" Padding="12,6" Click="OnConvert"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,8,0,0">
+            <TextBlock Text="Kilograms:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <TextBox x:Name="TbKg" Width="140" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

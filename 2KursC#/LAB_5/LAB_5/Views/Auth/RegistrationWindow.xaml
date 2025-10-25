@@ -1,0 +1,139 @@
+﻿<Window x:Class="LAB_5.Views.Auth.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registration"
+        Width="520" MinWidth="520"
+        Height="720" MinHeight="720"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFFDFEFE"
+        SizeToContent="Manual">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Create your account" FontSize="22" FontWeight="Bold"/>
+
+        <Border Grid.Row="2" Style="{StaticResource Card}" HorizontalAlignment="Stretch">
+            <!-- фиксированная рабочая ширина для ровных полей -->
+            <Grid Width="340" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Username label -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Username box -->
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Email label -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Email box -->
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Password label -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Password box -->
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Confirm label -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Confirm box -->
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- First/Last block -->
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Birth/Gender block -->
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="Auto"/>
+                    <!-- Error label -->
+                </Grid.RowDefinitions>
+
+                <!-- Username -->
+                <TextBlock Grid.Row="0" Text="Username" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                <TextBox x:Name="tbUsername" Grid.Row="1"
+                         Style="{StaticResource OutlinedTextBox}"
+                         HorizontalAlignment="Stretch"/>
+
+                <!-- Email -->
+                <TextBlock Grid.Row="3" Text="Email" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                <TextBox x:Name="tbEmail" Grid.Row="4"
+                         Style="{StaticResource OutlinedTextBox}"
+                         HorizontalAlignment="Stretch"/>
+
+                <!-- Password -->
+                <TextBlock Grid.Row="6" Text="Password" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                <PasswordBox x:Name="pbPassword" Grid.Row="7"
+                             Style="{StaticResource OutlinedPasswordBox}"
+                             HorizontalAlignment="Stretch"/>
+
+                <!-- Confirm password -->
+                <TextBlock Grid.Row="9" Text="Confirm password" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                <PasswordBox x:Name="pbConfirm" Grid.Row="10"
+                             Style="{StaticResource OutlinedPasswordBox}"
+                             HorizontalAlignment="Stretch"/>
+
+                <!-- First / Last name (две равные колонки) -->
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="First name" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                        <TextBox x:Name="tbFirst" Style="{StaticResource OutlinedTextBox}" HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                        <TextBlock Text="Last name" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                        <TextBox x:Name="tbLast" Style="{StaticResource OutlinedTextBox}" HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Birth date / Gender (две колонки) -->
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Birth date" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                        <DatePicker x:Name="dpBirth"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="12,0,0,0">
+                        <TextBlock Text="Gender" Style="{StaticResource MutedLabel}" Margin="0,0,0,4"/>
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton x:Name="rbMale" Content="Male" IsChecked="True" Margin="0,0,16,0"/>
+                            <RadioButton x:Name="rbFemale" Content="Female"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Error text -->
+                <TextBlock x:Name="lblError" Grid.Row="16"
+                           Foreground="{StaticResource DangerBrush}"
+                           FontSize="12"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Stretch"/>
+            </Grid>
+        </Border>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="160"/>
+                    <Setter Property="Height" Value="44"/>
+                    <Setter Property="Margin" Value="8"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Register" Style="{StaticResource FancyButton}" Click="OnRegister"/>
+            <Button Content="To Login" Click="OnGoLogin"/>
+        </StackPanel>
+    </Grid>
+</Window>

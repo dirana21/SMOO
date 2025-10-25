@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="LAB_3.Views.Task6View.Task6View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.Column="0">
+            <Button Content="Red"    Margin="2"/>
+            <Button Content="Green"  Margin="2"/>
+            <Button Content="Blue"   Margin="2"/>
+            <Button Content="Yellow" Margin="2"/>
+            <Button Content="Purple" Margin="2"/>
+            <Button Content="Orange" Margin="2"/>
+            
+        </WrapPanel>
+
+        <Border Grid.Column="1" Background="#0F000000" CornerRadius="6"/>
+    </Grid>
+</UserControl>

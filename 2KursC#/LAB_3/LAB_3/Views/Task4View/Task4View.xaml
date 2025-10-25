@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="LAB_3.Views.Task4View.Task4View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UniformGrid Margin="16" Rows="1" Columns="5">
+        <Button x:Name="B1" Content="Red"    Background="Tomato"        Click="OnToggle" Margin="4"/>
+        <Button x:Name="B2" Content="Blue"   Background="LightSteelBlue" Click="OnToggle" Margin="4"/>
+        <Button x:Name="B3" Content="Green"  Background="PaleGreen"     Click="OnToggle" Margin="4"/>
+        <Button x:Name="B4" Content="Purple" Background="Thistle"       Click="OnToggle" Margin="4"/>
+        <Button x:Name="B5" Content="Orange" Background="Moccasin"      Click="OnToggle" Margin="4"/>
+    </UniformGrid>
+</UserControl>

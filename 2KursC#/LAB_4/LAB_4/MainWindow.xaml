@@ -1,0 +1,19 @@
+﻿<Window x:Class="LAB_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:t1="clr-namespace:LAB_4.Views.Task1View"
+        xmlns:t2="clr-namespace:LAB_4.Views.Task2View"
+        Title="ЛР5 — Елементи керування" Width="900" Height="600">
+
+    <Grid>
+        <TabControl FontSize="16">
+            <TabItem Header="Task 1 — Calculator">
+                <t1:Task1View/>
+            </TabItem>
+
+            <TabItem Header="Task 2 — Auto Gas station">
+                <t2:Task2View/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
