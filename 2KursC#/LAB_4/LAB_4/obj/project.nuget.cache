@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Mn+9XKTZEDc=",
-  "success": true,
+  "dgSpecHash": "AjtIEhqH7kZVStB17iirBgVCH0iePJ/GQhstYQn7gPMpHBsUk736kpzdOJQAl7hD9xDtMeuLSh3+F5k7lZP6fg==",
+  "success": false,
   "projectFilePath": "C:\\Users\\Dirana\\Desktop\\ViktoriaBelskayaAllLAB_C#\\SMOO\\2KursC#\\LAB_4\\LAB_4\\LAB_4.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Невозможно прочитать сведения о проекте для \"LAB_4\": Идентификатор платформы \"\" недопустим."
+    }
+  ]
 }

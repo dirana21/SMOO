@@ -119,7 +119,7 @@ namespace LAB_4.Views.Task1View
 
         private void OnBinaryOp(object sender, RoutedEventArgs e)
         {
-            var op = ((Button)sender).Content.ToString(); // "+", "−", "×", "÷"
+            var op = ((Button)sender).Content.ToString(); 
 
             if (_acc is null)
             {
@@ -127,7 +127,7 @@ namespace LAB_4.Views.Task1View
             }
             else if (!_overwrite)
             {
-                // здесь _acc точно не null, поэтому .Value
+                
                 _acc = EvalBinary(_acc.Value, CurrentValue, _pendingOp);
                 CurrentValue = _acc.Value;
             }
