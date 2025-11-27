@@ -1,0 +1,93 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Competition for a vacant position" Height="500" Width="900">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,10">
+            <TextBlock Text="Education filter:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Width="150" Text="{Binding EducationFilter, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,20,0"/>
+
+            <TextBlock Text="Language filter:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox Width="150" Text="{Binding LanguageFilter, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,10,0">
+
+            <TextBlock Text="F.M.L."/>
+            <TextBox Text="{Binding SelectedCandidate.FullName, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Date of birth" Margin="0,10,0,0"/>
+            <DatePicker SelectedDate="{Binding SelectedCandidate.BirthDate, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="Education" Margin="0,10,0,0"/>
+            <ComboBox SelectedItem="{Binding SelectedCandidate.Education, UpdateSourceTrigger=PropertyChanged}">
+                <sys:String>secondary</sys:String>
+                <sys:String>average</sys:String>
+                <sys:String>higher</sys:String>
+            </ComboBox>
+
+            <TextBlock Text="Foreign language" Margin="0,10,0,0"/>
+            <ComboBox SelectedItem="{Binding SelectedCandidate.Language, UpdateSourceTrigger=PropertyChanged}">
+                <sys:String>english</sys:String>
+                <sys:String>german</sys:String>
+                <sys:String>french</sys:String>
+            </ComboBox>
+
+            <TextBlock Text="Language proficiency level" Margin="0,10,0,0"/>
+            <ComboBox SelectedItem="{Binding SelectedCandidate.LanguageLevel, UpdateSourceTrigger=PropertyChanged}">
+                <sys:String>I speak fluently</sys:String>
+                <sys:String>I read and translate with a dictionary</sys:String>
+            </ComboBox>
+
+            <CheckBox Content="I have a computer."
+                      IsChecked="{Binding SelectedCandidate.KnowsComputer, UpdateSourceTrigger=PropertyChanged}"
+                      Margin="0,10,0,0"/>
+
+            <TextBlock Text="Work experience (years)" Margin="0,10,0,0"/>
+            <TextBox Text="{Binding SelectedCandidate.ExperienceYears, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <CheckBox Content="Have an a recommendations"
+                      IsChecked="{Binding SelectedCandidate.HasRecommendations, UpdateSourceTrigger=PropertyChanged}"
+                      Margin="0,10,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Content="Add candidate"
+                        Command="{Binding AddCommand}" Width="150" Margin="0,0,10,0"/>
+                <Button Content="Delete candidate"
+                        Command="{Binding RemoveCommand}" Width="150"/>
+            </StackPanel>
+        </StackPanel>
+
+        
+        <DataGrid Grid.Row="1" Grid.Column="1"
+                  ItemsSource="{Binding CandidatesView}"
+                  SelectedItem="{Binding SelectedCandidate}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="False"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="F.M.L." Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Date of birth" Binding="{Binding BirthDate, StringFormat=d}" Width="Auto"/>
+                <DataGridTextColumn Header="Education" Binding="{Binding Education}" Width="Auto"/>
+                <DataGridTextColumn Header="Language" Binding="{Binding Language}" Width="Auto"/>
+                <DataGridTextColumn Header="Level" Binding="{Binding LanguageLevel}" Width="*"/>
+                <DataGridCheckBoxColumn Header="PC" Binding="{Binding KnowsComputer}" Width="Auto"/>
+                <DataGridTextColumn Header="Experience" Binding="{Binding ExperienceYears}" Width="Auto"/>
+                <DataGridCheckBoxColumn Header="Recommendations" Binding="{Binding HasRecommendations}" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
