@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+	<Student>
+		<LastName>Ivanov</LastName>
+		<FirstName>Petro</FirstName>
+		<Age>20</Age>
+		<Gender>Man</Gender>
+	</Student>
+	<Student>
+		<LastName>Petrenko</LastName>
+		<FirstName>Olena</FirstName>
+		<Age>19</Age>
+		<Gender>Girl</Gender>
+	</Student>
+</Students>
